@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --murcia-blue: #0064B5;
+  --murcia-red: #E30613;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-murcia-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6;
+  }
+  
+  .card-header {
+    @apply text-xl font-bold text-murcia-dark border-b pb-2 mb-4;
+  }
+  
+  .table-header {
+    @apply bg-murcia-blue text-white px-4 py-3 text-left font-semibold;
+  }
+  
+  .table-cell {
+    @apply px-4 py-3 border-b border-gray-200;
+  }
+  
+  .stat-card {
+    @apply bg-white rounded-lg shadow-md p-4 border-l-4 border-murcia-blue;
+  }
+  
+  .stat-card.presupuesto {
+    @apply border-l-green-500;
+  }
+  
+  .stat-card.ejecutado {
+    @apply border-l-red-500;
+  }
+  
+  .stat-card.prevision {
+    @apply border-l-yellow-500;
+  }
+  
+  .stat-card.ampliacion {
+    @apply border-l-purple-500;
+  }
+  
+  .nav-link {
+    @apply px-4 py-2 text-white hover:bg-murcia-red transition-colors rounded-lg;
+  }
+  
+  .nav-link.active {
+    @apply bg-murcia-red;
+  }
+}
